@@ -149,7 +149,7 @@ header {
 
 .main-container-img {
   display: block;
-  background-image: url(../images/sweetBg.jpg);
+  background-image: url(./images/sweetBg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
