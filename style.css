@@ -1,0 +1,284 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+body {
+  background-color: rgb(250, 218, 175);
+}
+header {
+  width: 100%;
+  position: sticky;
+  top: 0;
+}
+
+/* styles for nav h1 */
+.nav-h1 {
+  font-size: 7rem;
+  font-family: "Lavishly Yours", cursive;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+/* styles for top nav bar */
+.top-nav-bar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background: linear-gradient(to left, #f7c1b2, #fddbac);
+  color: rgb(116, 111, 78);
+  height: 80px;
+  padding: 1em;
+}
+
+/* styles for text from navigation  */
+
+.ul-text {
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+/* styles for navigation bar */
+
+.ul-text > li {
+  margin: 0 1rem;
+  overflow: hidden;
+}
+
+.ul-text li a {
+  text-decoration: none;
+  font-size: 2rem;
+  color: rgb(12, 12, 12);
+  transition: opacity 300ms ease-in;
+}
+.ul-text li a:hover {
+  border-bottom: 6px rgb(124, 6, 97) solid;
+  color: rgb(222, 25, 173);
+  opacity: 0.6;
+}
+
+/* styles for toggle button */
+.toggle-button-container {
+  display: none;
+  height: 100%;
+  width: 30px;
+  cursor: pointer;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.top-nav-bar .toggle-button-container .menu-toggle,
+.top-nav-bar .toggle-button-container .toggle-button {
+  right: 180px;
+}
+
+#menu-toggle {
+  display: none;
+}
+
+/* styles for Hamburger Menu */
+/* .top-nav-bar, */
+
+.toggle-button,
+.toggle-button::before,
+.toggle-button::after {
+  display: block;
+  background-color: rgb(222, 17, 17);
+  position: absolute;
+  height: 4px;
+  width: 30px;
+  transition: transform 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  border-radius: 2px;
+}
+
+.toggle-button::before {
+  content: "";
+  margin-top: -8px;
+}
+
+.toggle-button::after {
+  content: "";
+  margin-top: 8px;
+}
+
+#menu-toggle:checked + .toggle-button-container .toggle-button::before {
+  margin-top: 0px;
+  transform: rotate(405deg);
+}
+
+#menu-toggle:checked + .toggle-button-container .toggle-button {
+  background: rgba(255, 255, 255, 0);
+}
+
+#menu-toggle:checked + .toggle-button-container .toggle-button::after {
+  margin-top: 0px;
+  transform: rotate(-405deg);
+}
+
+/*  */
+
+/* styles for icon from navigation  */
+.div-icons-menu {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.div-icons-menu nav ul li {
+  padding: 10px;
+  display: inline;
+  overflow: hidden;
+  transition: opacity 1s ease-in;
+}
+.nav-icons ul li :hover .material-icons {
+  color: rgb(251, 251, 254);
+  background-color: rgb(249, 12, 194);
+  opacity: 0.2;
+}
+
+/* styles for main container */
+
+/* styles for main container img section  */
+
+.main-container-img {
+  display: block;
+  background-image: url(../images/sweetBg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 100px;
+  overflow: hidden;
+}
+
+/* styles for main container h1  */
+.main-container-h1 {
+  font-size: 4rem;
+  font-family: "Times New Roman", Times, serif;
+}
+
+/* styles for paragraph */
+
+.para-style {
+  font-size: 2rem;
+}
+
+/* styles for butons */
+
+.button {
+  color: rgb(17, 17, 17);
+  font-size: 2rem;
+  margin: 10px 0;
+  padding: 5px;
+  background-color: rgb(250, 71, 71);
+  border: 3px rgb(17, 17, 17) solid;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.button:hover {
+  color: #fff;
+  background-color: rgb(17, 17, 17);
+}
+
+/* styles for items section */
+.items-section {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-between;
+  padding: 40px;
+  justify-content: center;
+}
+
+.div-styles {
+  background-color: #e1fcf4;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  /* width: 200px; */
+  flex-direction: column;
+  margin: 5px;
+  padding: 30px;
+  line-height: 2rem;
+}
+
+.item-7,
+.item-8 {
+  flex-basis: 330px;
+}
+
+@media screen and (min-width: 966px) {
+  .items-section {
+    display: flex;
+    background-color: red;
+  }
+
+  .div-styles {
+    flex-basis: 20%;
+    flex-wrap: wrap;
+    flex-grow: 1;
+    border: 2px blue solid;
+  }
+}
+
+@media screen and (max-width: 965px) {
+  .div-styles {
+    flex-basis: 10%;
+    flex-wrap: wrap;
+    flex-grow: 2;
+    border: 2px blue solid;
+  }
+
+  /* media for hamburger menu */
+
+  .toggle-button-container {
+    display: flex;
+    /* border: 3px solid blue; */
+  }
+  .div-text-menu .ul-text {
+    position: absolute;
+    top: 50px;
+    margin-top: 50px;
+    left: 0;
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+  }
+  #menu-toggle ~ .div-text-menu .ul-text li {
+    height: 0;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  #menu-toggle:checked ~ .div-text-menu .ul-text li {
+    border: 1px solid rgb(253, 219, 119);
+    height: 2.5em;
+    padding: 0.5em;
+    transition: height 400ms cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .div-text-menu .ul-text > li {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0.5em 0;
+    width: 100%;
+    background-color: rgb(84, 82, 82);
+  }
+  .div-text-menu .ul-text > li a {
+    color: rgb(251, 201, 106);
+  }
+
+  .div-text-menu .ul-text > li:not(:last-child) {
+    border-bottom: 1px solid rgb(251, 201, 106);
+  }
+}
+
+/*  */
