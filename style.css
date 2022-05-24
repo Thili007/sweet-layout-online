@@ -228,6 +228,9 @@ header {
 }
 
 @media screen and (max-width: 965px) {
+  .items-section {
+    background-color: rgb(253, 198, 96);
+  }
   .div-styles {
     flex-basis: 10%;
     flex-wrap: wrap;
